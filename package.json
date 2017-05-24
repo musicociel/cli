@@ -30,6 +30,7 @@
     "globby": "^6.1.0",
     "minimist": "^1.2.0",
     "pify": "^2.3.0",
-    "pouchdb-node": "^6.2.0"
+    "pouchdb-adapter-http": "^6.2.0",
+    "pouchdb-core": "^6.2.0"
   }
 }

@@ -1,7 +1,8 @@
 import * as minimist from 'minimist';
 import * as promisify from 'pify';
 import * as fs from 'fs';
-import * as PouchDB from 'pouchdb-node';
+import * as PouchDB from 'pouchdb-core';
+import * as PouchDBAdapterHttp from 'pouchdb-adapter-http';
 import * as globby from 'globby';
 import {importFile} from '@musicociel/song-formats/build/song/formats/import';
 import {songToPouchDBEntry} from '@musicociel/song-formats/build/song/pouchdb';
@@ -48,7 +49,10 @@ Available options:
   });
   const inputFormat = config['input-format'];
 
-  const db = new PouchDB(outputDatabase);
+  PouchDB.plugin(PouchDBAdapterHttp);
+  const db = new PouchDB(outputDatabase, {
+    adapter: 'http'
+  });
 
   const ids = config['delete-others'] ? new Set<string>() : null;
 
