@@ -77,8 +77,8 @@ Available options:
 
   if (ids) {
     const allDocsResponse = await db.allDocs({
-      startkey: 'song\u0000',
-      endkey: 'song\u0000\uffff',
+      startkey: 'song\u0001',
+      endkey: 'song\u0001\uffff',
     });
     const rows = allDocsResponse.rows;
     for (const row of rows) {
