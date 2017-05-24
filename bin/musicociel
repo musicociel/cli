@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const main = require('../build/main').main;
+main(process.argv.slice(2)).catch(error => {
+  console.error(String(error));
+  return 1;
+}).then(exitCode => {
+  process.exit(exitCode || 0);
+});
