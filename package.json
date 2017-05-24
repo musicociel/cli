@@ -19,7 +19,8 @@
   },
   "files": [
     "src",
-    "build"
+    "build",
+    "bin"
   ],
   "devDependencies": {
     "typescript": "^2.3.3"
