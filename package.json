@@ -1,7 +1,7 @@
 {
   "name": "@musicociel/cli",
   "description": "Command line utility, related to the Musicociel application, allowing to manage songs (e.g. converting them between multiple formats, synchronizing them with a CouchDB-compatible database)",
-  "version": "0.0.7",
+  "version": "0.0.0-placeholder",
   "author": "DivDE <divde@musicociel.fr>",
   "license": "AGPL-3.0",
   "scripts": {
@@ -28,11 +28,11 @@
     "typescript": "^2.3.3"
   },
   "dependencies": {
-    "@musicociel/song-formats": "^0.0.6",
+    "@musicociel/song-formats": "^0.1.0",
     "@types/node": "^7.0.22",
     "globby": "^6.1.0",
     "minimist": "^1.2.0",
-    "pify": "^2.3.0",
+    "pify": "^3.0.0",
     "pouchdb-adapter-http": "^6.2.0",
     "pouchdb-core": "^6.2.0"
   }
