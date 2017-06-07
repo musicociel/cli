@@ -5,9 +5,10 @@
   "author": "DivDE <divde@musicociel.fr>",
   "license": "AGPL-3.0",
   "scripts": {
+    "semantic-release": "semantic-release",
     "watch": "tsc -p tsconfig.json --watch",
     "build": "tsc -p tsconfig.json",
-    "prepublish": "yarn build",
+    "prepare": "npm run build",
     "test": "true"
   },
   "bin": {
@@ -23,6 +24,7 @@
     "bin"
   ],
   "devDependencies": {
+    "semantic-release": "^6.3.6",
     "typescript": "^2.3.3"
   },
   "dependencies": {
